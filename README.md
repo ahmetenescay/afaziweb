@@ -103,6 +103,12 @@ Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
 
 ## İletişim
 
-- Proje yöneticisi: [Ahmet Enes Çay](ahmetenescay@gmail.com)
-- GitHub: [Ahmet Enes Çay](https://github.com/ahmetenescay)
+- Proje yöneticileri: 
+[Ahmet Enes Çay](ahmetenescay@gmail.com)
+[Atamer Çakkalkurt](atamercakkalkurt@gmail.com)
+
+- GitHub: 
+[Ahmet Enes Çay](https://github.com/ahmetenescay)
+[Atamer Çakkalkurt](https://github.com/AtamerCakkalkurt)
+
 
