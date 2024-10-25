@@ -104,11 +104,11 @@ Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
 ## İletişim
 
 - Proje yöneticileri: 
-[Ahmet Enes Çay](ahmetenescay@gmail.com)
+[Ahmet Enes Çay](ahmetenescay@gmail.com) ,
 [Atamer Çakkalkurt](atamercakkalkurt@gmail.com)
 
 - GitHub: 
-[Ahmet Enes Çay](https://github.com/ahmetenescay)
+[Ahmet Enes Çay](https://github.com/ahmetenescay) ,
 [Atamer Çakkalkurt](https://github.com/AtamerCakkalkurt)
 
 
