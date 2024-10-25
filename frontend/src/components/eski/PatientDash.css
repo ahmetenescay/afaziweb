@@ -1,0 +1,61 @@
+.patient-dashboard {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .patient-dashboard .appointments, .patient-dashboard .add-appointment {
+    margin-bottom: 20px;
+  }
+  
+  .patient-dashboard .appointments h3, .patient-dashboard .add-appointment h3 {
+    margin-bottom: 10px;
+  }
+  
+  .patient-dashboard .appointments ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .patient-dashboard .appointments li {
+    margin-bottom: 10px;
+  }
+  
+  .patient-dashboard .appointments li span {
+    margin-right: 10px;
+  }
+  
+  .patient-dashboard .add-appointment form input, .patient-dashboard .add-appointment form button {
+    margin-right: 10px;
+  }
+  
+  .patient-dashboard .add-appointment form button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .patient-dashboard .add-appointment form button:hover {
+    background-color: #0056b3;
+  }
+  .patient-dashboard .logout-button {
+    background-color: red; /* Butonun arka plan rengini kırmızı yapar */
+    color: white; /* Yazı rengini beyaz yapar */
+    border: none; /* Butonun kenarlıklarını kaldırır */
+    padding: 10px 20px; /* Butonun iç boşluklarını ayarlar */
+    cursor: pointer; /* Buton üzerine gelindiğinde imleci pointer yapar */
+    font-size: 16px; /* Yazı boyutunu ayarlar */
+    border-radius: 5px; /* Butonun köşelerini yuvarlar */
+    margin-top: 20px; /* Butonun üstüne boşluk ekler */
+  }
+  
+  .patient-dashboard .logout-button:hover {
+    background-color: darkred; /* Buton üzerine gelindiğinde arka plan rengini koyu kırmızı yapar */
+  }
+    

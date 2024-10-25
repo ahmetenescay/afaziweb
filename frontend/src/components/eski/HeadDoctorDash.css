@@ -1,0 +1,65 @@
+.head-doctor-dashboard {
+    padding: 20px;
+  }
+  
+  .head-doctor-dashboard h2 {
+    text-align: center;
+  }
+  
+  .add-doctor, .doctor-list {
+    margin-top: 20px;
+  }
+  
+  .add-doctor form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .add-doctor form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-doctor form button {
+    padding: 10px;
+    background-color: #4CAF50; /* Yeşil */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-doctor form button:hover {
+    background-color: #45a049;
+  }
+  
+  .doctor-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .doctor-list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .doctor-list ul li button {
+    padding: 5px 10px;
+    background-color: #f44336; /* Kırmızı */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .doctor-list ul li button:hover {
+    background-color: #d32f2f;
+  }
+  

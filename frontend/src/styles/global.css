@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer {
+  background: #121212;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #4a4a4a;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  background-color: rgb(98, 0, 238)
+  ;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Kenarları yuvarlama */
+  transition: background-color 0.3s ease;
+  /* Hover için geçiş efekti */
+}
+
+button:hover {
+  background-color: rgb(98, 0, 238)
+  ;
+  /* Hover rengi */
+}
+
+button:active {
+  background-color: rgb(98, 0, 238)
+  ;
+  /* Aktif rengi */
+}
+
+.slick-prev,
+.slick-next {
+    color: rgb(98, 0, 238)
+    ;
+}
