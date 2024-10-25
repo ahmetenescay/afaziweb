@@ -35,7 +35,7 @@ const LoginPage = () => {
                 <form onSubmit={handleSubmit} style={styles.form}>
                     <input
                         type="email"
-                        placeholder="e-Posta"
+                        placeholder="E-posta"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -51,7 +51,7 @@ const LoginPage = () => {
                     />
                     <button type="submit" style={{ ...styles.button, backgroundColor: theme.buttonBackground, color: theme.buttonText }}>Giriş Yap</button>
                     {error && <p style={styles.errorMessage}>{error}</p>}
-                    <p style={{marginTop:"20px"}}>Hesabınız yok mu?</p>
+                    <p style={{ marginTop: "20px" }}>Hesabınız yok mu? Kayıt Olun.</p>
                     <button onClick={handleRegister} style={{ ...styles.registerButton, backgroundColor: theme.buttonBackground, color: theme.buttonText }}>Kayıt Ol</button>
                 </form>
             </div>

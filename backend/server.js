@@ -5,8 +5,8 @@ const dotenv = require('dotenv');
 
 const authRoutes = require('./routes/auth');
 const appointmentRoutes = require('./routes/appointment');
-//const articleRoutes = require('./routes/article');
-//const commentRoutes = require('./routes/comment');
+const articleRoutes = require('./routes/article');
+const commentRoutes = require('./routes/comment');
 const contactRoutes = require('./routes/contact');
 const researchRoutes = require('./routes/research');
 
@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/auth', authRoutes);
 app.use('/api/appointments', appointmentRoutes);
-//app.use('/api/articles', articleRoutes);
-//app.use('/api/comments', commentRoutes);
+app.use('/api/articles', articleRoutes);
+app.use('/api/comments', commentRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/research', researchRoutes);
 

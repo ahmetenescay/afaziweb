@@ -6,8 +6,8 @@ const protect = require('../middleware/authMiddleware');
 const router = express.Router();
 
 router.post('/', protect, createArticle);
-router.get('/', protect, getArticles);
-router.get('/:id', protect, getArticleById);
+router.get('/', getArticles);
+router.get('/:id', getArticleById);
 router.post('/:id/like', protect, likeArticle);
 router.put('/:id', protect, updateArticle);
 router.delete('/:id', protect, deleteArticle);

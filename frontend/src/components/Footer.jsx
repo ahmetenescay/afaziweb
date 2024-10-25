@@ -3,6 +3,7 @@ import { ThemeContext } from '../ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -41,7 +42,7 @@ const Footer = () => {
         <p><FontAwesomeIcon icon={faMapMarkerAlt} /> {contactInfo.address}</p>
       </div>
       <div>
-        <p><strong>Daha fazlası için lütfen kayıt olun.</strong></p>
+        <Link style={{ textDecoration: "none" }} to={"/register"}><p><strong>Daha fazlası için lütfen kayıt olun.</strong></p></Link>
       </div>
       <p>© 2024 AfaziWeb. Tüm hakları saklıdır.</p>
     </footer>

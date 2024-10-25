@@ -60,8 +60,8 @@ const getPendingAppointments = (doctorId) => {
 };
 
 const deleteInvalidAppointments = () => {
-    const stmt = db.prepare('DELETE FROM appointments WHERE doctorId IS NULL AND patientId IS NULL');
-    return stmt.run();
+    const stmt = db.prepare('DELETE FROM appointments WHERE date = ?');
+    return stmt.run("");
 };
 
 const getApprovedAppointmentsForDoctor = (doctorId) => {

@@ -62,7 +62,7 @@ exports.getPatientAppointments = (req, res) => {
 };
 
 exports.getAvailableAppointments = (req, res) => {
-    console.log('getAvailableAppointments called');
+    //console.log('getAvailableAppointments called');
     try {
         const appointments = Appointment.getAvailableAppointments();
         //console.log('Available appointments:', appointments);

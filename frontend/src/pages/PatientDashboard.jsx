@@ -45,50 +45,50 @@ const PatientDashboard = () => {
     }, []);
 
     return (
-        <div style={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            padding: '20px', 
-            backgroundColor: theme.background, 
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '20px',
+            backgroundColor: theme.background,
             color: theme.color,
-            transition: theme.transition 
+            transition: theme.transition
         }}>
             <h1>Hasta Paneli</h1>
-            <div style={{ 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'space-between', 
-                width: '80%', 
-                height: '80vh' 
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                width: '80%',
+                height: '80vh'
             }}>
-                <div style={{ 
-                    flex: 1, 
-                    margin: '20px', 
-                    padding: '20px', 
-                    border: `1px solid ${theme.borderColor}`, 
-                    borderRadius: '8px', 
-                    overflowY: 'auto', 
-                    backgroundColor: theme.background, 
+                <div style={{
+                    flex: 1,
+                    margin: '20px',
+                    padding: '20px',
+                    border: `1px solid ${theme.borderColor}`,
+                    borderRadius: '8px',
+                    overflowY: 'auto',
+                    backgroundColor: theme.background,
                     color: theme.color,
-                    boxShadow: theme.boxShadow 
+                    boxShadow: theme.boxShadow
                 }}>
                     <h2>Seçilebilir Randevular</h2>
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {availableAppointments.map(appointment => (
                             <li key={appointment.id} style={{ margin: '10px 0' }}>
-                                Tarih: {appointment.date} Saat: {appointment.time}
-                                <button 
-                                    onClick={() => handleSelectAppointment(appointment.id)} 
-                                    style={{ 
-                                        marginLeft: '10px', 
-                                        padding: '5px 10px', 
+                                {appointment.date} {appointment.time}
+                                <button
+                                    onClick={() => handleSelectAppointment(appointment.id)}
+                                    style={{
+                                        marginLeft: '10px',
+                                        padding: '5px 10px',
                                         cursor: 'pointer',
-                                        backgroundColor: theme.buttonBackground, 
-                                        color: theme.buttonText, 
+                                        backgroundColor: theme.buttonBackground,
+                                        color: theme.buttonText,
                                         border: `1px solid ${theme.borderColor}`,
                                         boxShadow: theme.boxShadow,
-                                        transition: theme.transition 
+                                        transition: theme.transition
                                     }}
                                 >
                                     Seç
@@ -97,22 +97,22 @@ const PatientDashboard = () => {
                         ))}
                     </ul>
                 </div>
-                <div style={{ 
-                    flex: 1, 
-                    margin: '20px', 
-                    padding: '20px', 
-                    border: `1px solid ${theme.borderColor}`, 
-                    borderRadius: '8px', 
-                    overflowY: 'auto', 
-                    backgroundColor: theme.background, 
+                <div style={{
+                    flex: 1,
+                    margin: '20px',
+                    padding: '20px',
+                    border: `1px solid ${theme.borderColor}`,
+                    borderRadius: '8px',
+                    overflowY: 'auto',
+                    backgroundColor: theme.background,
                     color: theme.color,
-                    boxShadow: theme.boxShadow 
+                    boxShadow: theme.boxShadow
                 }}>
                     <h2>Onaylanmış Randevular</h2>
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {approvedAppointments.map(appointment => (
                             <li key={appointment.id} style={{ margin: '10px 0' }}>
-                               Tarih: {appointment.date} Saat: {appointment.time}
+                                {appointment.date} saat {appointment.time}
                             </li>
                         ))}
                     </ul>

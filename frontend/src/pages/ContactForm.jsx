@@ -28,31 +28,31 @@ const ContactForm = () => {
             },
             body: JSON.stringify(formData)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json().catch(() => {
-                throw new Error('Failed to parse JSON');
-            });
-        })
-        .then(data => {
-            if (data.message) {
-                alert(data.message);
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    message: ''
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json().catch(() => {
+                    throw new Error('Failed to parse JSON');
                 });
-            } else {
-                alert('Error saving contact information');
-            }
-        })
-        .catch(error => {
-            console.error('There was an error!', error);
-            alert('There was an error! ' + error.message);
-        });
+            })
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        message: ''
+                    });
+                } else {
+                    alert('Error saving contact information');
+                }
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+                alert('There was an error! ' + error.message);
+            });
     };
 
     return (
@@ -72,7 +72,7 @@ const ContactForm = () => {
                     <input
                         type="email"
                         name="email"
-                        placeholder="e-Posta"
+                        placeholder="E-posta"
                         value={formData.email}
                         onChange={handleChange}
                         required

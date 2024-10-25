@@ -119,7 +119,8 @@ const EditResearch = () => {
     const deleteButtonStyle = {
         ...buttonStyle,
         backgroundColor: theme.errorColor,
-        color: 'white'
+        color: 'white',
+        marginLeft: '10px'
     };
 
     return (
@@ -128,7 +129,7 @@ const EditResearch = () => {
                 <h1>Araştırmayı Düzenle</h1>
                 <div>
                     <label>
-                        Başlık:
+                        Title:
                         <input
                             type="text"
                             value={title}
@@ -139,7 +140,7 @@ const EditResearch = () => {
                 </div>
                 <div>
                     <label>
-                        İçerik:
+                        Content:
                         <textarea
                             value={content}
                             onChange={(e) => setContent(e.target.value)}
@@ -162,13 +163,13 @@ const EditResearch = () => {
                     onClick={handleUpdateResearch}
                     style={updateButtonStyle}
                 >
-                    Araştırmayı Güncelle
+                    Güncelle
                 </button>
                 <button
                     onClick={handleDeleteResearch}
                     style={deleteButtonStyle}
                 >
-                    Araştırmayı Sil
+                    Sil
                 </button>
             </div>
         </div>

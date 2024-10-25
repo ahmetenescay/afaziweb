@@ -20,7 +20,7 @@ const protect = (req, res, next) => {
         res.status(401).json({ message: 'Not authorized, no token' });
     }
 };
-
+/*
 const admin = (req, res, next) => {
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
@@ -49,4 +49,5 @@ const admin = (req, res, next) => {
         res.status(401).json({ message: 'Not authorized, no token' });
     }
 };
-module.exports = protect, admin;
+*/
+module.exports = protect;

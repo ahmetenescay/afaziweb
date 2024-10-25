@@ -6,7 +6,7 @@ import ThemeProvider from './ThemeContext';
 import Home from './pages/Home';
 import AfaziInfo from './pages/AfaziInfo';
 import Treatment from './pages/Treatment';
-import Resources from './pages/Resources';
+import Research from './pages/Research';
 import Login from './pages/LoginPage';
 import Register from './pages/RegisterPage';
 import DoctorDashboard from './pages/DoctorDashboard';
@@ -16,7 +16,8 @@ import ContactForm from './pages/ContactForm';
 import ResearchDetail from './pages/ResearchDetail';
 import CreateResearch from './pages/CreateResearch';
 import EditResearch from './pages/EditResearch';
-
+import ArticlesPage from './pages/ArticlesPage';
+import ArticlesDetail from './pages/ArticleDetail';
 function App() {
   const { currentUser } = useAuth();
 
@@ -32,7 +33,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<ContactForm />} />
-            <Route path="/research" element={<Resources />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:id" element={<ArticlesDetail />} />
+            <Route path="/research" element={<Research />} />
             <Route path="/research/:id" element={<ResearchDetail />} />
             <Route path="/create-research" element={<CreateResearch />} />
             <Route path="/edit-research/:id" element={<EditResearch />} />

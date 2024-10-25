@@ -35,11 +35,11 @@ const RegisterPage = () => {
     return (
         <div style={{ ...styles.registerContainer, backgroundColor: theme.background }}>
             <div style={{ ...styles.registerBox, backgroundColor: theme.boxBackground, color: theme.textColor }}>
-                <h1 style={styles.title}>Kayıt Ol</h1>
+                <h1 style={styles.title}>Register</h1>
                 <form onSubmit={handleSubmit} style={styles.form}>
                     <input 
                         type="text" 
-                        placeholder="İsim" 
+                        placeholder="Name" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)} 
                         required
@@ -47,7 +47,7 @@ const RegisterPage = () => {
                     />
                     <input 
                         type="email" 
-                        placeholder="e-Posta" 
+                        placeholder="Email" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
                         required
@@ -55,7 +55,7 @@ const RegisterPage = () => {
                     />
                     <input 
                         type="password" 
-                        placeholder="Şifre" 
+                        placeholder="Password" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required
@@ -63,13 +63,13 @@ const RegisterPage = () => {
                     />
                     <input 
                         type="password" 
-                        placeholder="Şifreyi Onayla" 
+                        placeholder="Confirm Password" 
                         value={confirmPassword} 
                         onChange={(e) => setConfirmPassword(e.target.value)} 
                         required
                         style={styles.input}
                     />
-                    <button type="submit" style={{ ...styles.button, backgroundColor: theme.buttonBackground, color: theme.buttonText }}>Kayıt Ol</button>
+                    <button type="submit" style={{ ...styles.button, backgroundColor: theme.buttonBackground, color: theme.buttonText }}>Register</button>
                 </form>
                 {error && <p style={styles.errorMessage}>{error}</p>}
             </div>

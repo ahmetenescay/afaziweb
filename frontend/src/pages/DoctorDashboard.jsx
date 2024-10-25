@@ -159,7 +159,7 @@ const DoctorDashboard = () => {
             color: theme.color,
             transition: theme.transition
         }}>
-            <h1>Doktor Paneli</h1>
+            <h1>Doktor Yönetim Paneli</h1>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -188,25 +188,30 @@ const DoctorDashboard = () => {
                         value={newAppointment.time}
                         onChange={(e) => setNewAppointment({ ...newAppointment, time: e.target.value })}
                     />
-                    <button onClick={handleCreateAppointment} disabled={!newAppointment.date || !newAppointment.time} style={{
-                        padding: '10px 20px',
-                        marginBottom: '30px',
-                        marginLeft: '10px',
-                        backgroundColor: theme.buttonBackground,
-                        color: theme.buttonText,
-                        border: `1px solid ${theme.borderColor}`,
-                        boxShadow: theme.boxShadow,
-                        transition: theme.transition,
-                        cursor: (!newAppointment.date || !newAppointment.time) ? 'not-allowed' : 'pointer'
-                    }}>
+                    <button
+                        onClick={handleCreateAppointment}
+                        disabled={!newAppointment.date || !newAppointment.time}
+                        style={{
+                            marginLeft: '20px',
+                            padding: '10px 20px',
+                            backgroundColor: theme.buttonBackground,
+                            color: theme.buttonText,
+                            border: `1px solid ${theme.borderColor}`,
+                            boxShadow: theme.boxShadow,
+                            transition: theme.transition,
+                            cursor: (!newAppointment.date || !newAppointment.time) ? 'not-allowed' : 'pointer'
+                        }}
+                    >
                         Oluştur
                     </button>
-                    
-                    <h2>Seçilebilir Randevular</h2>
+
+
+                    <h2>Randevular</h2>
+
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {appointments.map(appointment => (
                             <li key={appointment.id} style={{ margin: '10px 0' }}>
-                                <p>Tarih: {appointment.date} Saat: {appointment.time}</p>
+                                <p>{appointment.date} saat {appointment.time}</p>
                             </li>
                         ))}
                     </ul>
@@ -222,14 +227,15 @@ const DoctorDashboard = () => {
                     color: theme.color,
                     boxShadow: theme.boxShadow
                 }}>
-                    <h2>Onay Bekleyen Randevular</h2>
+                    <h2>Bekleyen Randevular</h2>
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {pendingAppointments.map(appointment => (
                             <li key={appointment.id} style={{ margin: '10px 0' }}>
-                                <p>Tarih: {appointment.date} Saat: {appointment.time}</p>
+                                <p>{appointment.date} saat {appointment.time}</p>
                                 <button
                                     onClick={() => handleApproveAppointment(appointment.id)}
                                     style={{
+                                        marginLeft: '20px',
                                         padding: '5px 10px',
                                         backgroundColor: theme.buttonBackground,
                                         color: theme.buttonText,
@@ -259,7 +265,7 @@ const DoctorDashboard = () => {
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {approvedAppointments.map(appointment => (
                             <li key={appointment.id} style={{ margin: '10px 0' }}>
-                                <p>Tarih: {appointment.date} Saat: {appointment.time}</p>
+                                <p>{appointment.date} saat {appointment.time}</p>
                             </li>
                         ))}
                     </ul>
@@ -279,7 +285,7 @@ const DoctorDashboard = () => {
                     <h2>Bize Ulaşanlar</h2>
                     <ul style={{ listStyleType: 'none', padding: 0 }}>
                         {contactMessages.map(message => (
-                            <li key={message.id} style={{ margin: '20px 0' }}>
+                            <li key={message.id} style={{ margin: '20px 0', border: "1px solid black", borderRadius: "5px" }}>
                                 <p>{message.name}</p>
                                 <p>{message.email}</p>
                                 <p>{message.phone}</p>
@@ -293,7 +299,9 @@ const DoctorDashboard = () => {
                                         color: theme.buttonText,
                                         border: `1px solid ${theme.borderColor}`,
                                         boxShadow: theme.boxShadow,
-                                        transition: theme.transition
+                                        transition: theme.transition,
+                                        marginBottom: '5px',
+                                        marginLeft: '20px'
                                     }}
                                 >
                                     Mesajı Sil
